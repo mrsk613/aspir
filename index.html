@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aspir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="pc-header">
+            <a tabindex="-1" class="logo">aspir</a>
+            <nav>
+                <ol>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="journal/index.html">Journal</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="sp-header">
+            <a tabindex="-1" class="logo">aspir</a>
+            <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+                <div class="nav-overlay__content">
+                    <ol class="nav-overlay__list">
+                        <li class="nav-overlay__item"><a href="about.html">About</a></li>
+                        <li class="nav-overlay__item"><a href="products/index.html">Products</a></li>
+                        <li class="nav-overlay__item"><a href="journal/index.html">Journal</a></li>
+                        <li class="nav-overlay__item"><a href="login.html">Login</a></li>
+                        <li class="nav-overlay__item"><a href="cart.html">Cart</a></li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="mv">
+            <h1 class="title fadeUp">aspir</h1>
+            <p class="sub_title fadeUp">かわいいのかくし味</p>
+        </section>
+        <section class="about">
+            <p>かわいいは、<br>誰かに見せるためだけのものじゃない。</p>
+            <p>いつもの服に、<br>いつもの机に、<br>自分のために選ぶ、少しのときめき。</p>
+            <div class="button"><a href="about.html">read more</a></div>
+        </section>
+        <section class="products">
+            <h2>Products</h2>
+            <div class="flex_group">
+                <div class="item"><a href="products/index.html?category=still">Still<p>静けさを整える</p></a></div>
+                <div class="item"><a href="products/index.html?category=light">Light<p>光をまとう</p></a></div>
+                <div class="item"><a href="products/index.html?category=calm">Calm<p>日常に溶け込む</p></a></div>
+                <div class="item"><a href="products/index.html?category=featuredItems">Featured Items<p>季節限定</p></a></div>
+            </div>
+        </section>
+        <section class="journal">
+            <h2>Journal</h2>
+            <div class="journal_list">
+                <a href="#" class="journal_item">自分のための”かわいい”って、なんだろう</a>
+                <a href="#" class="journal_item">5分で整う、小さなかわいいのつくり方</a>
+                <a href="#" class="journal_item">なぜ、黒を使いすぎないのか</a>
+            </div>
+            <div class="button"><a href="journal/index.html">read more</a></div>
+        </section>
+    </main>
+    <footer>
+        <div class="flex_group">
+            <div class="footer_logo">
+                <p class="title">aspir</p>
+                <p class="sub_title">かわいいのかくし味</p>
+            </div>
+            <div class="footer_nav">
+                <ol>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="journal/index.html">Journal</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ol>
+
+                <div class="mali">
+                    <p><label for="email">Mail Magazine</label></p>
+                    <div class="flex_group">
+                        <input type="email" id="email" pattern=".+@example\.com" size="30" /><button type="button" disabled>登録</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Copyright 2026 aspir</p>
+    </footer>
+    <script src="assets/js/assets.js"></script>
+</body>
+
+</html>

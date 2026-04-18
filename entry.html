@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry｜aspir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/assets.css">
+</head>
+<body>
+    <header>
+        <div class="pc-header">
+            <a href="index.html" class="logo">aspir</a>
+            <nav>
+                <ol>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="journal/index.html">Journal</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="sp-header">
+            <a href="index.html" class="logo">aspir</a>
+            <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+                <div class="nav-overlay__content">
+                    <ol class="nav-overlay__list">
+                        <li class="nav-overlay__item"><a href="about.html">About</a></li>
+                        <li class="nav-overlay__item"><a href="products/index.html">Products</a></li>
+                        <li class="nav-overlay__item"><a href="journal/index.html">Journal</a></li>
+                        <li class="nav-overlay__item"><a href="login.html">Login</a></li>
+                        <li class="nav-overlay__item"><a href="cart.html">Cart</a></li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="mv">
+            <h1 class="fadeUp">Entry</h1>
+        </section>
+        <section class="entry">
+            <form method="post">
+                <h2>お客様情報</h2>
+                 <table class="form_table">
+                    <tbody>
+                        <tr>
+                            <th>氏名</th>
+                            <td><input type="text" class="width40" name="text01" placeholder="苗字　名前"></td>
+                        </tr>
+                        <tr>
+                            <th>フリガナ</th>
+                            <td><input type="text" class="width40" name="text02" placeholder="ミョウジ　ナマエ"></td>
+                        </tr>
+                        <tr>
+                            <th>メールアドレス</th>
+                            <td><input type="email" name="email01" class="width40" pattern=".+@example\.com" placeholder="abc@example.co.jp" /></td>
+                        </tr>
+                        <tr>
+                            <th>メールアドレス（確認）</th>
+                            <td><input type="email" name="email02" class="width40" pattern=".+@example\.com" placeholder="abc@example.co.jp" /></td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td><input type="tel" name="tel" value="" class="width40" placeholder="09012345678"></td>
+                        </tr>
+                        <tr>
+                            <th>郵便番号</th>
+                            <td><input type="text" name="text03" class="width40" placeholder="111-2222"></td>
+                        </tr>
+                        <tr>
+                            <th>住所１</th>
+                            <td><input type="text" name="text03" class="width80" placeholder="東京都港区芝4丁目7番6号"></td>
+                        </tr>
+                        <tr>
+                            <th>住所２</th>
+                            <td><input type="text" name="text04" class="width80" placeholder="芝ビルディング704"></td>
+                        </tr>
+                    </tbody>
+                 </table>
+
+                 <h2>その他情報</h2>
+                 <table class="form_table">
+                    <tr>
+                        <th>性別</th>
+                        <td>
+                            <input type="radio" name="sex" id="man" value="男性"><label for="man">男性</label>
+                            <input type="radio" name="sex" id="woman" class="ml-8" value="女性"><label for="woman">女性</label>
+                            <input type="radio" name="sex" id="none" class="ml-8" value="無回答"><label for="none">無回答</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>生年月日</th>
+                        <td><input type="text" name="year" value="" placeholder="1999" size="4">年<input class="ml-8" type="text" name="month" value="" placeholder="1" size="2">月<input class="ml-8" type="text" name="day" value="" placeholder="10" size="2">日</td>
+                    </tr>
+                    <tr>
+                        <th>メールマガジン</th>
+                        <td>
+                            <input type="radio" name="mailmagazin" id="yes" value="配信を希望する"><label for="yes">配信を希望する</label>
+                            <input type="radio" name="mailmagazin" id="no" class="ml-8" value="女性"><label for="no">配信を希望しないs</label>
+                        </td>
+                    </tr>
+                    <tr>
+                            <th>パスワード</th>
+                            <td><input type="password" class="width40" size="50"></td>
+                        </tr>
+                 </table>
+                 <p class="button"><input type="submit" disabled value="登録する"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="flex_group">
+            <div class="footer_logo">
+                <p class="title">aspir</p>
+                <p class="sub_title">かわいいのかくし味</p>
+            </div>
+            <div class="footer_nav">
+                <ol>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products/index.html">Products</a></li>
+                    <li><a href="journal/index.html">Journal</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ol>
+
+                <div class="mali">
+                    <p><label for="email">Mail Magazine</label></p>
+                    <div class="flex_group">
+                        <input type="email" id="email" pattern=".+@example\.com" size="30" /><button type="button" disabled>登録</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Copyright 2026 aspir</p>
+    </footer>
+    <script src="assets/js/assets.js"></script>
+</body>
+</html>
