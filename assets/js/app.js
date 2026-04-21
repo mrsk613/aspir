@@ -89,6 +89,7 @@ document.querySelectorAll(".cart").forEach(btn => {
     btn.addEventListener("click", () => {
         const id = btn.dataset.id;
         const name = btn.dataset.name;
+        const color = btn.dataset.color;
         const price = Number(btn.dataset.price);
 
         const existing = cart.find(item => item.id === id);
@@ -96,7 +97,7 @@ document.querySelectorAll(".cart").forEach(btn => {
         if (existing) {
             existing.qty += 1;
         } else {
-            cart.push({ id, name, price, qty: 1 });
+            cart.push({ id, name, color, price, qty: 1 });
         }
 
         save();
@@ -125,7 +126,7 @@ if (cartList) {
         cart.forEach((item, index) => {
             const li = document.createElement("li");
 
-            li.innerHTML = `<span class="placename">${item.name} - ¥${item.price}</span>
+            li.innerHTML = `<span class="placename">${item.name}（${item.color}） - ¥${item.price}</span>
 
       <span class="crease_box"><button class="decrease">−</button><span>${item.qty}</span><button class="increase">＋</button></span><button class="remove">削除</button>
     `;
