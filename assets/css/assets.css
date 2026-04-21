@@ -8,6 +8,10 @@
     position: relative;
 }
 
+b {
+    font-weight: 700;
+}
+
 body {
     background: #F9F8F6;
 }
@@ -21,14 +25,14 @@ header {
 }
 
 .fadeUp {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fadeUp.is-active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .pc-header {
@@ -76,7 +80,7 @@ header ol a.target {
 
 a {
     text-decoration: none;
-    background: none;
+    /* background: none; */
 }
 
 .mv {
@@ -169,43 +173,188 @@ h1 {
     margin: 0 auto;
 }
 
-@media screen and (max-width:1400px) {
+.item_mv {
+    width: 1400px;
+    margin: 0 auto 100px auto;
+    padding: 140px 0 0 0;
+}
 
+.item_mv .flex_group {
+    column-gap: 32px;
+}
+
+.products_item,
+.products_text {
+    width: calc(100% / 2 - 16px);
+}
+
+.products_item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.products_text h2,
+.related h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.price {
+    text-align: right;
+    margin: 0 0 32px 0;
+}
+
+.products_text .color {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 24px 0;
+}
+
+.products_text .color_sample {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+    border: #3A3F42 1px solid;
+}
+
+.products_text .color p {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.products_text button.cart {
+    font-size: 16px;
+    padding: 16px 20px;
+    background: #F9F8F6;
+    border: #3A3F42 1px solid;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.products_text button.cart:hover {
+    background: rgba(148, 163, 173, 0.2);
+}
+
+.item_section,
+.related {
+    width: 1400px;
+    margin: 0 auto 100px auto;
+}
+
+.item_section p {
+    margin: 0 0 64px 0;
+}
+
+.item_section dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item_section dt {
+    width: 6rem;
+    margin: 0 0 16px 0;
+}
+
+.item_section dd {
+    width: calc(100% - 6rem);
+    margin: 0 0 16px 0;
+}
+
+.related .flex_group {
+    justify-content: flex-start;
+    column-gap: 200px;
+}
+
+.related_item {
+    position: relative;
+    width: calc(100% / 3 - 134px);
+}
+
+.related_item a {
+    display: block;
+    transition: all 0.3s;
+    padding: 24px 16px 16px 16px;
+    border-radius: 6px;
+}
+
+.related_item a:hover {
+    background: rgba(148, 163, 173, 0.2);
+}
+
+.related_item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.related_item p.name,
+.related_item p.price {
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 16px 0;
+}
+
+.related_item button.fav {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 8%;
+    bottom: 25%;
+    width: 32px;
+    height: 32px;
+
+}
+
+@media screen and (max-width:1400px) {
     .category,
     .products {
         width: 100%;
         padding: 0 30px;
         margin: 100px 0 0 0;
     }
+
+    .item_mv,
+    .item_section,
+    .related {
+        width: 100%;
+        margin: 0;
+        padding: 100px 30px 0 30px;
+    }
 }
 
 .products .flex_group {
     justify-content: flex-start;
-    column-gap: 250px;
-    row-gap: 64px;
+    gap: 64px;
 }
 
 .cat_item {
-    width: 300px;
+    width: calc(100% / 3 - 43px);
     text-align: center;
+    position: relative;
 }
 
 .cat_item a {
+    display: block;
     transition: all 0.3s;
+    padding: 24px 16px 16px 16px;
+    border-radius: 6px;
 }
 
 .cat_item a:hover {
-    opacity: 0.8;
-}
-
-.cat_item figure {
-    position: relative;
-    margin: 0 0 24px 0;
+    background: rgba(148, 163, 173, 0.2);
 }
 
 .cat_item img {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -216,9 +365,10 @@ h1 {
     background: none;
     border: none;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20%;
+    right: 8%;
     transition: transform 0.2s;
+    z-index: 222;
 }
 
 .cat_item button.fav img {
@@ -237,7 +387,7 @@ h1 {
 .cat_item p.price {
     font-size: 14px;
     font-weight: 500;
-    margin: 0 0 16px 0;
+    margin: 0;
     text-align: left;
 }
 
@@ -247,6 +397,11 @@ h1 {
     background: #F9F8F6;
     border: #3A3F42 1px solid;
     border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.cat_item button.cart:hover {
+    background: rgba(148, 163, 173, 0.2);
 }
 
 .cart_section {
@@ -255,7 +410,7 @@ h1 {
     margin: 0 auto;
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1200px) {
     .cart_section {
         width: 100%;
         padding: 120px 30px 0 30px;
@@ -283,7 +438,7 @@ ul#cartList li {
 
 .placename {
     display: inline-block;
-    width: 20%;
+    width: 30%;
 }
 
 .crease_box .decrease {
@@ -551,7 +706,7 @@ p.copyright {
     color: #94A3AD;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     header {
         left: 20px;
         width: calc(100% - 40px);
@@ -687,6 +842,19 @@ p.copyright {
         text-decoration: none;
         transition: color .3s;
     }
+
+    .mv {
+        padding: 320px 0 320px 30px;
+    }
+
+    table.form_table th {
+        width: 30%;
+    }
+
+    .width40,
+    .width80 {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -699,10 +867,6 @@ p.copyright {
     .mv .sub_title,
     .footer_logo .sub_title {
         font-size: 32px;
-    }
-
-    .mv {
-        padding: 320px 0 320px 30px;
     }
 
     h1 {
@@ -734,6 +898,11 @@ p.copyright {
         aspect-ratio: 1;
     }
 
+    .products_item,
+    .products_text {
+        width: 100%;
+    }
+
     div.journal_list a.journal_item {
         font-size: 16px;
         padding: 48px 118px 48px 32px;
@@ -759,11 +928,6 @@ p.copyright {
 
     table.form_table td {
         display: block;
-        width: 100%;
-    }
-
-    .width40,
-    .width80 {
         width: 100%;
     }
 
