@@ -314,6 +314,7 @@ h1 {
 }
 
 @media screen and (max-width:1400px) {
+
     .category,
     .products {
         width: 100%;
@@ -855,6 +856,23 @@ p.copyright {
     .width80 {
         width: 100%;
     }
+
+    .cat_item {
+        width: calc(100% / 2 - 43px);
+    }
+
+    .cat_item button.fav {
+        bottom: 22%;
+    }
+
+    .related_item {
+        width: calc(100% / 2 - 134px);
+    }
+
+    .related_item button.fav {
+        bottom: 35%;
+        right: 12%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -899,8 +917,14 @@ p.copyright {
     }
 
     .products_item,
-    .products_text {
+    .products_text,
+    .related_item {
         width: 100%;
+    }
+
+    .related_item button.fav {
+        bottom: 25%;
+        right: 9%;
     }
 
     div.journal_list a.journal_item {
@@ -911,6 +935,7 @@ p.copyright {
     div.journal_list a::after {
         width: 70px;
     }
+    
 
     .placename {
         width: 50%;
